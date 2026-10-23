@@ -1,0 +1,27 @@
+<?php
+// =====================================================
+// Elegance Salon Management System
+// LOCAL MAIL & SMTP CREDENTIALS (SENSITIVE)
+// =====================================================
+// This file is NOT committed to git and is protected from web access by .htaccess.
+//
+// INSTRUCTIONS TO ENABLE REAL GMAIL SMTP:
+// 1. Set 'enabled' => true
+// 2. Put your full Gmail address in 'smtp_user'
+// 3. Put your 16-character Google App Password in 'smtp_pass' (e.g. 'abcd efgh ijkl mnop')
+//    To generate a Google App Password:
+//    a) Visit: https://myaccount.google.com/apppasswords
+//    b) Name it "Elegance Salon", click Create, and copy the 16 characters.
+
+return [
+    'email' => [
+        'enabled'     => false,             // Change to true when you enter your credentials
+        'smtp_host'   => 'smtp.gmail.com',
+        'smtp_port'   => 587,
+        'smtp_secure' => 'tls',             // STARTTLS on port 587
+        'smtp_user'   => '',                // <-- YOUR GMAIL ADDRESS (e.g. 'yourname@gmail.com')
+        'smtp_pass'   => '',                // <-- YOUR 16-CHAR GOOGLE APP PASSWORD
+        'from_email'  => '',                // Leave blank to automatically use smtp_user
+        'from_name'   => 'Elegance Salon',
+    ],
+];

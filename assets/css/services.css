@@ -1,0 +1,547 @@
+
+/* =====================================================
+   ELEGANCE SALON — SERVICES PAGE
+   Compact Hero + Seamless Menu + Responsive Cards
+   ===================================================== */
+
+:root {
+    --sp-bg: #101315;
+    --sp-card: #191E20;
+    --sp-text: #F7F5F0;
+    --sp-muted: #AAB3B3;
+    --sp-accent: #E8C547;
+    --sp-teal: #0D9488;
+    --sp-border: rgba(232, 197, 71, 0.18);
+}
+
+/* =====================================================
+   MAIN SECTION — CONTINUOUS BACKGROUND
+   ===================================================== */
+
+.sp-main-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            ellipse at 15% 8%,
+            rgba(17, 112, 105, 0.16),
+            transparent 42%
+        ),
+        radial-gradient(
+            ellipse at 90% 48%,
+            rgba(67, 29, 38, 0.15),
+            transparent 45%
+        ),
+        #101315;
+}
+
+/* =====================================================
+   HERO SECTION — COMPACT SPACING
+   ===================================================== */
+
+.sp-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    margin: 0;
+    padding: 2rem 0 0.5rem !important;
+    text-align: center;
+    background: transparent !important;
+}
+
+.sp-hero-bg {
+    display: none;
+}
+
+.sp-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.sp-hero h1 {
+    margin: 0.25rem 0 0.6rem;
+    color: var(--sp-text);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+}
+
+.sp-hero h1 em {
+    color: var(--sp-accent);
+    font-style: italic;
+}
+
+.sp-hero p {
+    max-width: 460px;
+    margin: 0 auto 0.5rem;
+    padding: 0;
+    color: #B7C0C0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Remove Browse Menu and Reserve Now buttons */
+
+.sp-hero-actions {
+    display: none !important;
+}
+
+/* =====================================================
+   MENU SECTION — REDUCED HERO GAP
+   ===================================================== */
+
+.sp-menu {
+    position: relative;
+    margin: 0 !important;
+    padding: 0.5rem 0 3rem !important;
+    background: transparent !important;
+}
+
+.sp-menu > .container {
+    position: relative;
+    padding-top: 0 !important;
+}
+
+/* =====================================================
+   CATEGORY SECTION
+   ===================================================== */
+
+.sp-category {
+    margin-bottom: 4rem;
+}
+
+.sp-category:last-child {
+    margin-bottom: 0.75rem;
+}
+
+/* Category heading */
+
+.sp-category-head {
+    position: relative;
+    margin-bottom: 1.75rem;
+    padding: 0 0 1.25rem;
+    text-align: center;
+}
+
+.sp-category-icon {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.7rem;
+    border: 1px solid var(--sp-border);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.035);
+    color: var(--sp-accent);
+    font-size: 1.05rem;
+}
+
+.sp-category-head::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 55px;
+    height: 2px;
+    border-radius: 10px;
+    background: var(--sp-accent);
+    box-shadow: 0 0 12px rgba(232, 197, 71, 0.22);
+    content: "";
+    transform: translateX(-50%);
+}
+
+.category-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--sp-accent);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.sp-category-head h2 {
+    margin: 0 0 0.45rem;
+    color: var(--sp-text);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3vw, 2.65rem);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.category-meta,
+.sp-category-head span {
+    color: var(--sp-muted);
+    font-size: 0.78rem;
+    letter-spacing: 0.3px;
+}
+
+/* =====================================================
+   SERVICE GRID
+   ===================================================== */
+
+.sp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.15rem;
+    align-items: stretch;
+}
+
+/* =====================================================
+   SERVICE CARDS
+   ===================================================== */
+
+.sp-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+    background: var(--sp-card);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.sp-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(232, 197, 71, 0.38);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.25);
+}
+
+/* Service images */
+
+.sp-card-media {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: #202728;
+}
+
+.sp-card-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.sp-card:hover .sp-card-media img {
+    transform: scale(1.055);
+}
+
+.sp-card-media-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(12, 15, 20, 0.04) 25%,
+        rgba(12, 15, 20, 0.18) 60%,
+        rgba(12, 15, 20, 0.7) 100%
+    );
+    pointer-events: none;
+}
+
+/* Price badge */
+
+.sp-card-price {
+    position: absolute;
+    z-index: 2;
+    top: 12px;
+    right: 12px;
+    padding: 0.38rem 0.75rem;
+    border: 1px solid rgba(12, 15, 20, 0.08);
+    border-radius: 999px;
+    background: var(--sp-accent);
+    color: var(--sp-bg);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* =====================================================
+   CARD CONTENT
+   ===================================================== */
+
+.sp-card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.2rem 1.15rem 1.3rem;
+}
+
+.sp-duration {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+    color: #D9BD62;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.sp-card h3 {
+    margin: 0 0 0.6rem;
+    color: var(--sp-text);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.sp-card p {
+    flex: 1;
+    margin: 0 0 1.25rem;
+    color: var(--sp-muted);
+    font-size: 0.84rem;
+    line-height: 1.75;
+}
+
+/* Individual service Reserve button */
+
+.sp-book {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding: 0.65rem 1.1rem;
+    border: 1px solid rgba(232, 197, 71, 0.45);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--sp-accent);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.sp-book:hover {
+    gap: 0.75rem;
+    border-color: var(--sp-accent);
+    background: var(--sp-accent);
+    color: #101315;
+}
+
+.sp-book:focus-visible,
+.sp-cta .btn-gold:focus-visible {
+    outline: 2px solid var(--sp-text);
+    outline-offset: 4px;
+}
+
+/* =====================================================
+   BOTTOM CALL TO ACTION
+   ===================================================== */
+
+.sp-cta-wrap {
+    margin: 0;
+    padding: 0 0 4.5rem;
+    background: #101315;
+}
+
+.sp-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 3.5rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 22px;
+    background:
+        radial-gradient(
+            ellipse at 80% 0%,
+            rgba(13, 148, 136, 0.16),
+            transparent 55%
+        ),
+        linear-gradient(135deg, #1B2425, #171A1D);
+    text-align: center;
+}
+
+.sp-cta .section-kicker {
+    color: var(--sp-accent);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+}
+
+.sp-cta h2 {
+    margin: 0.8rem 0 0.9rem;
+    color: var(--sp-text);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.sp-cta h2 em {
+    color: var(--sp-accent);
+    font-style: italic;
+}
+
+.sp-cta p {
+    max-width: 430px;
+    margin: 0 auto 1.75rem;
+    color: var(--sp-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.sp-cta .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 0.85rem 1.5rem;
+    border: 1px solid var(--sp-accent);
+    border-radius: 999px;
+    background: var(--sp-accent);
+    color: var(--sp-bg);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sp-cta .btn-gold:hover {
+    transform: translateY(-2px);
+    border-color: #F4D96D;
+    background: #F4D96D;
+}
+
+/* =====================================================
+   TABLET RESPONSIVENESS
+   ===================================================== */
+
+@media (max-width: 992px) {
+    .sp-hero {
+        padding: 1.75rem 0 0.4rem !important;
+    }
+
+    .sp-menu {
+        padding-top: 0.4rem !important;
+    }
+
+    .sp-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .sp-card-media {
+        height: 200px;
+    }
+
+    .sp-category {
+        margin-bottom: 3.25rem;
+    }
+}
+
+/* =====================================================
+   MOBILE RESPONSIVENESS
+   ===================================================== */
+
+@media (max-width: 576px) {
+    .sp-hero {
+        padding: 1.5rem 0 0.35rem !important;
+    }
+
+    .sp-hero h1 {
+        font-size: clamp(2.25rem, 10vw, 2.7rem);
+        letter-spacing: -1px;
+        margin-bottom: 0.5rem;
+    }
+
+    .sp-hero p {
+        max-width: 390px;
+        padding: 0 0.35rem;
+        margin-bottom: 0.35rem;
+        font-size: 0.92rem;
+        line-height: 1.7;
+    }
+
+    .sp-menu {
+        padding: 0.35rem 0 2rem !important;
+    }
+
+    .sp-category {
+        margin-bottom: 2.75rem;
+    }
+
+    .sp-category-head {
+        margin-bottom: 1.4rem;
+        padding-bottom: 1.15rem;
+    }
+
+    .sp-category-head h2 {
+        font-size: 1.9rem;
+    }
+
+    .sp-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .sp-card {
+        border-radius: 14px;
+    }
+
+    .sp-card-media {
+        height: 230px;
+    }
+
+    .sp-card-body {
+        padding: 1.1rem 1.1rem 1.25rem;
+    }
+
+    .sp-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .sp-cta-wrap {
+        padding-bottom: 3rem;
+    }
+
+    .sp-cta {
+        padding: 2.25rem 1.2rem;
+        border-radius: 18px;
+    }
+
+    .sp-cta h2 {
+        font-size: 2rem;
+    }
+
+    .sp-cta p {
+        font-size: 0.9rem;
+    }
+}
+
+/* =====================================================
+   REDUCED MOTION ACCESSIBILITY
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .sp-card,
+    .sp-card-media img,
+    .sp-book,
+    .sp-cta .btn-gold {
+        transition: none;
+    }
+
+    .sp-card:hover,
+    .sp-cta .btn-gold:hover {
+        transform: none;
+    }
+
+    .sp-card:hover .sp-card-media img {
+        transform: none;
+    }
+}

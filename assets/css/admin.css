@@ -1,0 +1,492 @@
+/* =====================================================
+   ELEGANCE SALON — ADMIN & PORTAL STYLES
+   Directly derived from the Homepage Design System
+   ===================================================== */
+
+/* 1. Layout & Wrapper */
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background: var(--black);
+}
+
+.sidebar {
+    width: 260px;
+    background: var(--black-soft);
+    color: var(--white);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: var(--transition);
+    border-right: 1px solid var(--border);
+}
+
+.sidebar-brand {
+    padding: 24px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(232, 197, 71, 0.15);
+}
+
+.sidebar-brand h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--cream);
+    margin: 0;
+    font-size: 1.35rem;
+    letter-spacing: 1.5px;
+}
+
+.sidebar-brand small {
+    color: var(--champagne);
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 16px 0;
+    margin: 0;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 22px;
+    margin: 3px 12px;
+    color: var(--cream);
+    font-size: 0.92rem;
+    font-weight: 400;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.sidebar-menu li a i {
+    width: 20px;
+    text-align: center;
+    color: var(--champagne);
+    font-size: 1rem;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
+    background: rgba(232, 197, 71, 0.12);
+    color: var(--champagne);
+    border-left: 3px solid var(--champagne);
+}
+
+.main-content {
+    margin-left: 260px;
+    flex: 1;
+    min-width: 0;
+    background: var(--black);
+    min-height: 100vh;
+}
+
+/* 2. Topbar */
+.topbar {
+    background: var(--black-soft);
+    color: var(--cream);
+    padding: 16px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+}
+
+.topbar h5 {
+    color: var(--cream);
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+.content-area {
+    padding: 28px;
+}
+
+@media screen {
+    .admin-wrapper .text-muted,
+    .admin-wrapper .form-text,
+    .modal-content-elegant .text-muted,
+    .modal-content-elegant .form-text {
+        color: var(--muted) !important;
+    }
+
+    .admin-wrapper .form-control::placeholder,
+    .admin-wrapper .form-control-elegant::placeholder,
+    .modal-content-elegant .form-control::placeholder,
+    .modal-content-elegant .form-control-elegant::placeholder {
+        color: var(--muted) !important;
+        opacity: 1;
+    }
+
+    .admin-wrapper .form-control::-webkit-input-placeholder,
+    .admin-wrapper .form-control-elegant::-webkit-input-placeholder,
+    .modal-content-elegant .form-control::-webkit-input-placeholder,
+    .modal-content-elegant .form-control-elegant::-webkit-input-placeholder {
+        color: var(--muted) !important;
+        opacity: 1;
+    }
+
+    .admin-wrapper .form-control::-moz-placeholder,
+    .admin-wrapper .form-control-elegant::-moz-placeholder,
+    .modal-content-elegant .form-control::-moz-placeholder,
+    .modal-content-elegant .form-control-elegant::-moz-placeholder {
+        color: var(--muted) !important;
+        opacity: 1;
+    }
+
+    .admin-wrapper .form-control:-ms-input-placeholder,
+    .admin-wrapper .form-control-elegant:-ms-input-placeholder,
+    .modal-content-elegant .form-control:-ms-input-placeholder,
+    .modal-content-elegant .form-control-elegant:-ms-input-placeholder {
+        color: var(--muted) !important;
+        opacity: 1;
+    }
+
+    .admin-wrapper .form-control:disabled,
+    .admin-wrapper .form-select:disabled,
+    .admin-wrapper .form-control[readonly],
+    .modal-content-elegant .form-control:disabled,
+    .modal-content-elegant .form-select:disabled,
+    .modal-content-elegant .form-control[readonly] {
+        color: var(--muted) !important;
+        opacity: 1;
+    }
+}
+
+/* 3. Cards & Panels */
+.card-elegant {
+    background: var(--black-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    padding: 24px;
+    transition: var(--transition);
+    color: var(--cream);
+}
+
+.card-elegant:hover {
+    border-color: rgba(232, 197, 71, 0.35);
+}
+
+/* 4. KPI Cards */
+.kpi-card {
+    background: var(--black-card);
+    color: var(--cream);
+    border-radius: var(--radius);
+    padding: 22px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    height: 100%;
+}
+
+.kpi-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(232, 197, 71, 0.35);
+}
+
+.kpi-card .kpi-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(232, 197, 71, 0.12);
+    color: var(--champagne);
+    font-size: 1.3rem;
+}
+
+.kpi-card .kpi-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--cream);
+    margin: 8px 0 2px;
+    line-height: 1.1;
+}
+
+.kpi-card .kpi-label {
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.kpi-card .kpi-sub {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+/* 5. Tables & Anti-White-BG Overrides */
+.table-elegant {
+    --bs-table-bg: transparent !important;
+    --bs-table-accent-bg: transparent !important;
+    --bs-table-striped-bg: transparent !important;
+    --bs-table-hover-bg: rgba(232, 197, 71, 0.05) !important;
+    --bs-table-color: var(--cream) !important;
+    background-color: var(--black-card) !important;
+    color: var(--cream) !important;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.table-elegant > :not(caption) > * > * {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: var(--cream) !important;
+    border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.table-elegant thead th {
+    border: none;
+    padding: 14px 16px;
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--champagne) !important;
+    background-color: var(--black-soft) !important;
+    box-shadow: none !important;
+    white-space: nowrap;
+}
+
+.table-elegant tbody td {
+    padding: 14px 16px;
+    vertical-align: middle;
+    border-color: rgba(255, 255, 255, 0.06) !important;
+    color: var(--cream) !important;
+    font-size: 0.92rem;
+}
+
+.table-elegant tbody tr:hover > * {
+    background-color: rgba(232, 197, 71, 0.04) !important;
+    color: var(--cream) !important;
+}
+
+/* Modals Background (Prevents Bootstrap White Modal) */
+.modal-content,
+.modal-content-elegant {
+    background-color: var(--black-card) !important;
+    color: var(--cream) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius) !important;
+    box-shadow: var(--shadow) !important;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--border) !important;
+}
+
+.modal-header .btn-close {
+    filter: invert(1) brightness(0.8);
+}
+
+/* Input Fields inside Admin & Modals */
+.admin-wrapper .form-control,
+.admin-wrapper .form-select,
+.modal-content .form-control,
+.modal-content .form-select {
+    background-color: var(--black-soft) !important;
+    border: 1px solid rgba(232, 197, 71, 0.25) !important;
+    color: var(--cream) !important;
+    border-radius: 8px !important;
+}
+
+.admin-wrapper .form-control:focus,
+.admin-wrapper .form-select:focus,
+.modal-content .form-control:focus,
+.modal-content .form-select:focus {
+    background-color: var(--black-soft) !important;
+    border-color: var(--champagne) !important;
+    color: var(--cream) !important;
+    box-shadow: 0 0 0 3px rgba(232, 197, 71, 0.15) !important;
+}
+
+.admin-wrapper .form-select option,
+.modal-content .form-select option {
+    background-color: var(--black-card) !important;
+    color: var(--cream) !important;
+}
+
+/* 6. Status Badges */
+.badge-status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-transform: capitalize;
+}
+
+.badge-status.badge-confirmed {
+    background: rgba(232, 197, 71, 0.18);
+    color: var(--champagne);
+    border: 1px solid rgba(232, 197, 71, 0.35);
+}
+
+.badge-status.badge-pending {
+    background: rgba(232, 197, 71, 0.10);
+    color: var(--champagne-light);
+    border: 1px solid rgba(232, 197, 71, 0.20);
+}
+
+.badge-status.badge-completed {
+    background: rgba(13, 148, 136, 0.25);
+    color: #2DD4BF;
+    border: 1px solid rgba(45, 212, 191, 0.35);
+}
+
+.badge-status.badge-cancelled,
+.badge-status.badge-no-show {
+    background: rgba(239, 68, 68, 0.18);
+    color: #FCA5A5;
+    border: 1px solid rgba(239, 68, 68, 0.30);
+}
+
+.badge-status.badge-lowstock {
+    background: rgba(239, 68, 68, 0.18);
+    color: #FCA5A5;
+    border: 1px solid rgba(239, 68, 68, 0.30);
+}
+
+.badge-status.badge-paid {
+    background: rgba(13, 148, 136, 0.25);
+    color: #2DD4BF;
+    border: 1px solid rgba(45, 212, 191, 0.35);
+}
+
+/* 7. Forms & Inputs */
+.form-control-elegant {
+    border: 1px solid rgba(232, 197, 71, 0.25);
+    border-radius: 8px;
+    padding: 10px 14px;
+    background: var(--black-soft);
+    color: var(--cream);
+    transition: var(--transition);
+    font-size: 0.92rem;
+}
+
+.form-control-elegant::placeholder {
+    color: var(--muted);
+    opacity: 0.8;
+}
+
+.form-control-elegant:focus {
+    border-color: var(--champagne);
+    box-shadow: 0 0 0 3px rgba(232, 197, 71, 0.15);
+    outline: none;
+    background: var(--black-soft);
+    color: var(--cream);
+}
+
+.form-label-elegant {
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 6px;
+    font-size: 0.88rem;
+}
+
+/* 8. Responsive Breakpoints & Mobile Sidebar */
+.sidebar-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(12, 15, 20, 0.75);
+    backdrop-filter: blur(3px);
+    z-index: 998;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-backdrop.active {
+    display: block;
+}
+
+@media (max-width: 991px) {
+    .sidebar {
+        margin-left: -260px;
+        box-shadow: none;
+        z-index: 1050;
+    }
+
+    .sidebar.show {
+        margin-left: 0;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.65);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .content-area {
+        padding: 18px 14px;
+    }
+
+    .topbar {
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .content-area {
+        padding: 14px 10px;
+    }
+
+    .kpi-card {
+        padding: 16px;
+    }
+
+    .kpi-card .kpi-value {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-area {
+        padding: 10px 8px;
+    }
+
+    .card-elegant {
+        padding: 16px 12px;
+        border-radius: 14px;
+    }
+
+    .topbar h5 {
+        font-size: 1.1rem;
+    }
+
+    .table-elegant thead th,
+    .table-elegant tbody td {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,8 @@
+/* Elegance Salon - Modular CSS Loader */
+@import url('variables.css');
+@import url('main.css');
+@import url('home-enhance.css');
+@import url('admin.css');
+@import url('auth.css');
+@import url('about.css');
+@import url('notifications.css');

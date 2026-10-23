@@ -1,0 +1,38 @@
+/* =====================================================
+   ELEGANCE SALON
+   CHARCOAL × EMERALD × GOLD  —  UNIQUE PREMIUM THEME
+   ===================================================== */
+
+:root {
+    --black: #0C0F14;
+    --black-soft: #151A21;
+    --black-card: #1C232C;
+    --burgundy: #0D9488;
+    --burgundy-dark: #0F766E;
+    --burgundy-light: #2DD4BF;
+    --champagne: #E8C547;
+    --champagne-dark: #D4A017;
+    --champagne-light: #F5E6A3;
+    --cream: #F7F5F0;
+    --white: #FFFFFF;
+    --muted: #B7C3CF;
+    --muted-strong: #D8DEE6;
+    --muted-soft: rgba(247, 245, 240, 0.72);
+    --muted-on-light: #596779;
+    --border: rgba(232, 197, 71, 0.18);
+    --shadow: 0 20px 50px rgba(0, 0, 0, 0.50);
+    --radius: 18px;
+    --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --bs-body-color: var(--cream);
+    --bs-body-color-rgb: 247, 245, 240;
+    --bs-secondary-color: var(--muted-soft);
+    --bs-tertiary-color: rgba(247, 245, 240, 0.62);
+    --bs-emphasis-color: var(--white);
+    --bs-secondary-bg: var(--black-soft);
+    --bs-border-color: var(--border);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

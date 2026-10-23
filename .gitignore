@@ -1,0 +1,32 @@
+# Environment and local credentials
+.env
+.env.local
+config/mail.local.php
+
+# PHP logs & temp files
+logs/*.log
+*.log
+
+# Vendor & Composer
+vendor/
+
+.env
+.env.*
+
+# Database backups and exports
+*backup*.sql
+*_backup*.sql
+*_export*.sql
+/backups/
+
+# Temporary backup files
+*.bak
+*.bak_*
+
+# Logs
+/logs/*.log
+*.log
+
+# Temporary test scripts
+/check_stylist.php
+/reset_receptionist.php
